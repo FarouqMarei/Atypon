@@ -4,7 +4,7 @@ import {
   UserGroupIcon,
   AcademicCapIcon,
 } from "@heroicons/react/24/solid";
-import farouq from "@/assets/images/OfficialMe.jpg"
+import farouq from "@/assets/images/officialMe.jpg"
 
 const benefits: Array<BenefitType> = [
   {
