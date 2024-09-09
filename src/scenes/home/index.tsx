@@ -1,8 +1,8 @@
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { SelectedPage } from "@/shared/types";
 import HomePageGraphic from "@/assets/images/image2.png";
-import Vector from "@/assets/images/Vector.png";
-import Burger from "@/assets/images/Burger.png";
+import Vector from "@/assets/images/vector.png";
+import Burger from "@/assets/images/burger.png";
 import Search from "@/assets/images/search.png";
 import { useEffect, useState } from "react";
 import ToggleSwitch from "@/shared/ToggleSwitch";
