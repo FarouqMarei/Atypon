@@ -4,7 +4,8 @@ import {
   UserGroupIcon,
   AcademicCapIcon,
 } from "@heroicons/react/24/solid";
-import farouq from "@/assets/images/officialMe.jpg"
+import farouq from "@/assets/images/officialMe.jpg";
+import walk from "@/assets/images/image36.png";
 
 const benefits: Array<BenefitType> = [
   {
@@ -41,59 +42,60 @@ type Props = {
 const Benefits = ({ setSelectedPage }: Props) => {
   return (
     <main className="main-layout">
-    {/* Left Sidebar */}
-    <aside className="sidebar left-sidebar font-color">
-      <div>
-        Cover Image: A stripy monarch caterpillar (Danaus plexippus) gorges on a butterfly milkweed. Photo by: Sarah Mac
-        Farland
-        Photo by: Sarah Mac Farland
-      </div>
-      <ul>
-        <li><a href="#">Popular Articles</a></li>
-        <li><a href="#">Trending Topics</a></li>
-        <li><a href="#">Health Tips</a></li>
-        <li><a href="#">Newsletter Signup</a></li>
-      </ul>
-    </aside>
-
-    {/* <!-- Main Content --> */}
-    <section className="main-content font-color">
-
-      <section className="content">
-        <div className="article-content">
-          <p>orem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque
-            sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et Lorem ipsum dolor sit amet,
-          </p>
-          <p>consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam
-            ut varius ultrices id diam elit amet. Lacinia cursus morbi dui vulputate. </p>
-          <h3>Abstract</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi,
-            pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia Feugiat et Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis.
-            In pulvinar quam ut varius ultrices id diam elit amet. Lacinia cursus morbi dui vulputate. </p>
-            <h3>Lorem</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia Feugiat et Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia cursus morbi dui vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia cursus morbi dui vulputate. </p>
-          <div id="body"></div>
+      {/* Left Sidebar */}
+      <aside className="sidebar left-sidebar font-color">
+        <div>
+          Cover Image: A stripy monarch caterpillar (Danaus plexippus) gorges on a butterfly milkweed. Photo by: Sarah Mac
+          Farland
+          Photo by: Sarah Mac Farland
         </div>
-      </section>
-    </section>
+        <ul>
+          <li><a href="#">Popular Articles</a></li>
+          <li><a href="#">Trending Topics</a></li>
+          <li><a href="#">Health Tips</a></li>
+          <li><a href="#">Newsletter Signup</a></li>
+        </ul>
+      </aside>
 
-    {/* <!-- Right Sidebar --> */}
-    <aside className="right-sidebar font-color">
-      <div className="author-info">
-        <img src={farouq} alt="Author Image"/>
-        <div className="author-details">
-          <h4>Farouq Marei</h4>
-          <p>Software Engineering Team Lead</p>
-          <p><small>April 1, 2021</small></p>
-          <div className="social-stats">
-            <span>1K Shares</span> | <span>5K Views</span>
+      {/* <!-- Main Content --> */}
+      <section className="main-content font-color">
+
+        <section className="content">
+          <div className="article-content">
+            <article className="drop-cap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque
+              sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et Lorem ipsum dolor sit amet,consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam
+              ut varius ultrices id diam elit amet. Lacinia cursus morbi dui vulputate.</article>
+            <h3 className="font-size-32">Abstract</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi,
+              pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia Feugiat et Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis.
+              In pulvinar quam ut varius ultrices id diam elit amet. Lacinia cursus morbi dui vulputate. </p>
+            <div className="ad-banner">Ad Banner 728x90</div>
+            <h3 className="font-size-32">Lorem</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia Feugiat et Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia cursus morbi dui vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia cursus morbi dui vulputate. </p>
+            <div id="body"></div>
+            <img src={walk} alt="Atypon Logo" />
+            <p className="font-size-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia Feugiat et Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+          </div>
+        </section>
+      </section>
+
+      {/* <!-- Right Sidebar --> */}
+      <aside className="right-sidebar font-color">
+        <div className="author-info">
+          <img src={farouq} alt="Author Image" />
+          <div className="author-details">
+            <h4>Farouq Marei</h4>
+            <p>Software Engineering Team Lead</p>
+            <p><small>April 1, 2021</small></p>
+            <div className="social-stats">
+              <span>1K Shares</span> | <span>5K Views</span>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="ad-banner">Ad Banner 300x250</div>
-    </aside>
-  </main>
+        <div className="ad-banner">Ad Banner 300x250</div>
+      </aside>
+    </main>
   );
 };
 

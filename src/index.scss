@@ -333,6 +333,15 @@ body {
   }
 }
 
+.main-content {
+  .ad-banner {
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
 footer {
   text-align: center;
   padding: 20px;
@@ -465,3 +474,42 @@ footer {
   color: black;
 }
 
+.font-size-12 {
+  font-size: 12px;
+}
+
+.font-size-32 {
+  font-family: Noto Serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: left;
+  width: 413px;
+  height: 40px;
+  top: 1442px;
+  left: 437px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+body {
+  font-family: 'Slabo 27px';
+  font-size: 1.5em;
+  line-height: 1.5;
+  padding: 0px 0;
+}
+
+article {
+}
+
+.drop-cap::first-letter {
+  -webkit-initial-letter: 3;
+          initial-letter: 3;
+  font-weight: bold;
+  margin-right: .20em;
+  font-family: Noto Serif;
+  font-size: 94px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+}
