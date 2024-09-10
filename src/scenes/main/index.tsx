@@ -6,6 +6,9 @@ import {
 } from "@heroicons/react/24/solid";
 import farouq from "@/assets/images/officialMe.jpg";
 import walk from "@/assets/images/image36.png";
+import Calendar from "@/assets/images/Calendar.png";
+import Share from "@/assets/images/Share.png";
+import View from "@/assets/images/View.png";
 
 const benefits: Array<BenefitType> = [
   {
@@ -43,11 +46,10 @@ const Benefits = ({ setSelectedPage }: Props) => {
   return (
     <main className="main-layout">
       {/* Left Sidebar */}
-      <aside className="sidebar left-sidebar font-color">
+      <aside className="sidebar left-sidebar font-color font-size-12">
         <div>
-          Cover Image: A stripy monarch caterpillar (Danaus plexippus) gorges on a butterfly milkweed. Photo by: Sarah Mac
-          Farland
-          Photo by: Sarah Mac Farland
+          <p><span className="font-weight-700">Cover Image</span>: A stripy monarch caterpillar (Danaus plexippus) gorges on a butterfly milkweed. Photo by: Sarah Mac Farland</p>
+          <p><span className="font-weight-700">Photo by</span>: Sarah Mac Farland</p>
         </div>
         <ul>
           <li><a href="#">Popular Articles</a></li>
@@ -83,13 +85,29 @@ const Benefits = ({ setSelectedPage }: Props) => {
       {/* <!-- Right Sidebar --> */}
       <aside className="right-sidebar font-color">
         <div className="author-info">
-          <img src={farouq} alt="Author Image" />
-          <div className="author-details">
-            <h4>Farouq Marei</h4>
-            <p>Software Engineering Team Lead</p>
-            <p><small>April 1, 2021</small></p>
-            <div className="social-stats">
-              <span>1K Shares</span> | <span>5K Views</span>
+          <div className="text-align-left">
+            <p className="font-size-16">About</p>
+            <hr className="horizontal-line" />
+          </div>
+          <div className="flex padding-top-10">
+            <img src={farouq} alt="Author Image" />
+            <div className="author-details padding-left-20">
+              <h4 className="font-size-16 author-name text-align-left">Farouq Marei</h4>
+              <p className="font-size-12 author-title">Software Engineering Team Lead</p>
+            </div>
+          </div>
+          <div className="social-stats text-align-left padding-top-20">
+            <div className="flex line-height-normal">
+              <img className="flex author-info-image-size" src={Calendar} alt="Author Image" />
+              <p className="font-size-12 padding-left-10"><small>April 1, 2021</small></p>
+            </div>
+            <div className="flex line-height-normal">
+              <img className="flex author-info-image-size" src={Share} alt="Author Image" />
+              <p className="font-size-12 padding-left-10"><small>1K Shares</small></p>
+            </div>
+            <div className="flex line-height-normal">
+              <img className="flex author-info-image-size" src={View} alt="Author Image" />
+              <p className="font-size-12 padding-left-10"><small>5K Views</small></p>
             </div>
           </div>
         </div>
