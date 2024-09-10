@@ -7,8 +7,8 @@ import ScrollToTop from "../ScrollToTop/ScrollToTop";
 const Footer = () => {
   return (
     <footer className="bg-primary-100 py-16 footer-font-color">
+      <p className="related-posts">RELATED POSTS</p>
       <div className="justify-content mx-auto w-5/6 gap-16 md:flex">
-        <label>RELATED POSTS</label>
         <div className="mt-16 basis-1/2 md:mt-0">
           <div className="">
             <img
