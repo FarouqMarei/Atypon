@@ -772,3 +772,134 @@ article {
 .bottom-footer {
   justify-content: center;
 }
+
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.input-icons i {
+  position: absolute;
+}
+
+.mail-icon {
+  padding: 10px;
+  background: url("/src/assets/images/mail-grey.png") no-repeat left;
+  min-width: 40px;
+}
+
+.input-field {
+  padding: 10px;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  padding-left: 30px;
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  width: 150px;
+  color: white;
+  background: #B0062A;
+  border-radius: 4px;
+}
+
+.news-letter {
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #dedede;
+  margin-top: 20px;
+}
+
+.right-sidebar {
+  .tabs-section {
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+
+      .tab {
+        padding: 10px;
+        cursor: pointer;
+        border: none;
+        background: none;
+        font-weight: bold;
+      }
+
+      .active {
+        border-bottom: 2px solid red;
+      }
+    }
+
+    .tab-content {
+      .article-list {
+        .article-card {
+          display: flex;
+          margin-bottom: 10px;
+
+          img {
+            width: 50px;
+            height: 50px;
+          }
+
+          .article-info {
+            margin-left: 10px;
+
+            h4 {
+              font-size: 14px;
+              margin: 0;
+            }
+
+            p {
+              font-size: 12px;
+              color: grey;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .follow-us {
+    margin-top: 20px;
+    p {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: space-around;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .tags-section {
+    margin-top: 20px;
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      button {
+        padding: 5px 10px;
+        background-color: #f1f1f1;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.non-author-data {
+  width: 60%;
+}

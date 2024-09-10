@@ -12,12 +12,29 @@ import Email from "@/assets/images/Email.png";
 import Charts from "@/assets/images/charts.png";
 import ArrowRight from "@/assets/images/ArrowRight.png";
 import ArrowLeft from "@/assets/images/ArrowLeft.png";
+import MailIcon from "@/assets/images/Mail-icon.png";
+import FacebookFollow from "@/assets/images/facebook-follow.png";
+import TwitterFollow from "@/assets/images/twitter-follow.png";
+import YoutubeFollow from "@/assets/images/youtube-follow.png";
+import LinkedinFollow from "@/assets/images/linkedin-follow.png";
+import Stairs from "@/assets/images/image13.png";
+import Yellow from "@/assets/images/image14.png";
+import Green from "@/assets/images/image16.png";
+import Boot from "@/assets/images/image18.png";
+import { useState } from "react";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
 const MainBody = ({ setSelectedPage }: Props) => {
+
+  const [activeTab, setActiveTab] = useState('Latest');
+
+  const handleTabClick = (tabName: string) => {
+    setActiveTab(tabName);
+  };
+
   return (
     <main className="main-layout">
       {/* Left Sidebar */}
@@ -147,7 +164,123 @@ const MainBody = ({ setSelectedPage }: Props) => {
             </div>
           </div>
         </div>
-        <div className="ad-banner">Ad Banner 300x250</div>
+        <div className="non-author-data">
+          <div className="ad-banner">Ad Banner 300x250</div>
+          <div className="news-letter padding-top-20">
+            <div className="flex">
+              <img className="author-info-image-size" src={MailIcon} alt="Author Image" />
+              <p>Subscribe to our Newsletter</p>
+            </div>
+            <p>No spam, notifications only about new products, update</p>
+            <div className="input-icons">
+              <input className="input-field mail-icon" type="text" placeholder="Enter your email here" />
+            </div>
+            <div>
+              <button className="submit-btn">SUBMIT</button>
+            </div>
+          </div>
+
+          {/* Tabs Section */}
+          <div className="tabs-section">
+            <div className="tabs">
+              <button
+                className={activeTab === 'Latest' ? 'tab active' : 'tab'}
+                onClick={() => handleTabClick('Latest')}
+              >
+                Latest
+              </button>
+              <button
+                className={activeTab === 'Popular' ? 'tab active' : 'tab'}
+                onClick={() => handleTabClick('Popular')}
+              >
+                Popular
+              </button>
+              <button
+                className={activeTab === 'Trending' ? 'tab active' : 'tab'}
+                onClick={() => handleTabClick('Trending')}
+              >
+                Trending
+              </button>
+            </div>
+
+            <div className="tab-content">
+              {activeTab === 'Latest' && (
+                <div className="article-list">
+                  {/* Map through the article data */}
+                  <div className="article-card">
+                    <img src={Stairs} alt="Article Image" />
+                    <div className="article-info">
+                      <h4>Smarter Food Choices 101 Tips For Busy Women</h4>
+                      <p>By Iasonas Georg... | 15 June 2019</p>
+                    </div>
+                  </div>
+                  <div className="article-card">
+                    <img src={Yellow} alt="Article Image" />
+                    <div className="article-info">
+                      <h4>Smarter Food Choices 101 Tips For Busy Women</h4>
+                      <p>By Iasonas Georg... | 15 June 2019</p>
+                    </div>
+                  </div>
+                  <div className="article-card">
+                    <img src={Green} alt="Article Image" />
+                    <div className="article-info">
+                      <h4>Smarter Food Choices 101 Tips For Busy Women</h4>
+                      <p>By Iasonas Georg... | 15 June 2019</p>
+                    </div>
+                  </div>
+                  <div className="article-card">
+                    <img src={Boot} alt="Article Image" />
+                    <div className="article-info">
+                      <h4>Smarter Food Choices 101 Tips For Busy Women</h4>
+                      <p>By Iasonas Georg... | 15 June 2019</p>
+                    </div>
+                  </div>
+                  {/* Repeat similar cards */}
+                </div>
+              )}
+
+              {activeTab === 'Popular' && (
+                <div className="article-list">
+                  Popular data
+                </div>
+              )}
+
+              {activeTab === 'Trending' && (
+                <div className="article-list">
+                  Trending data
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Follow Us Section */}
+          <div className="follow-us">
+            <p>Follow Us</p>
+            <div className="social-icons">
+              <img src={FacebookFollow} alt="Facebook" />
+              <img src={TwitterFollow} alt="Twitter" />
+              <img src={YoutubeFollow} alt="YouTube" />
+              <img src={LinkedinFollow} alt="LinkedIn" />
+            </div>
+          </div>
+
+          {/* Tags Section */}
+          <div className="tags-section">
+            <p>Tags</p>
+            <div className="tags">
+              <button>Health</button>
+              <button>Life</button>
+              <button>Women</button>
+              <button>Men</button>
+              <button>Family's Health</button>
+              <button>Nutrition</button>
+              <button>Kids</button>
+              <button>Diseases</button>
+              <button>Habits</button>
+              <button>Healthy</button>
+            </div>
+          </div>
+        </div>
       </aside>
     </main>
   );
