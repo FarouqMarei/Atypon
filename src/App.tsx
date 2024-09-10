@@ -4,6 +4,7 @@ import Footer from "@/scenes/footer";
 import { useEffect, useState } from "react";
 import { SelectedPage } from "@/shared/types";
 import { useTranslation } from "react-i18next";
+import AboutUs from "./scenes/about";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -28,6 +29,7 @@ function App() {
       <Home setSelectedPage={setSelectedPage} />
       <Main setSelectedPage={setSelectedPage} />
       <Footer />
+      <AboutUs />
     </div>
   );
 }
