@@ -1,63 +1,52 @@
-import { BenefitType, SelectedPage } from "@/shared/types";
-import {
-  HomeModernIcon,
-  UserGroupIcon,
-  AcademicCapIcon,
-} from "@heroicons/react/24/solid";
+import { SelectedPage } from "@/shared/types";
 import farouq from "@/assets/images/officialMe.jpg";
 import walk from "@/assets/images/image36.png";
 import Calendar from "@/assets/images/Calendar.png";
 import Share from "@/assets/images/Share.png";
 import View from "@/assets/images/View.png";
-
-const benefits: Array<BenefitType> = [
-  {
-    icon: <HomeModernIcon className="h-3 w-3" />,
-    title: "State of the Art Facilities",
-    description:
-      "Neque adipiscing amet amet enim. Feugiat dolor enim fermentum in a in lectus pellentesque. Ullamcorper et.",
-  },
-  {
-    icon: <UserGroupIcon className="h-6 w-6" />,
-    title: "100's of Diverse Classes",
-    description:
-      "Eu ipsum id egestas risus tempus enim semper felis quis. Nec consectetur ac venenatis facilisi est. Eget ac turpis id.",
-  },
-  {
-    icon: <AcademicCapIcon className="h-3 w-3" />,
-    title: "Expert and Pro Trainers",
-    description:
-      "Fusce vestibulum aliquam ut cras. Nisl lectus egestas sapien nisl. Lacus at mi sit pellentesque. Congue parturient.",
-  },
-];
-
-const container = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.2 },
-  },
-};
+import Twitter from "@/assets/images/Twitter.png";
+import LinkedIn from "@/assets/images/LinkedIn.png";
+import Facebook from "@/assets/images/Facebook.png";
+import Reddit from "@/assets/images/Reddit.png";
+import Email from "@/assets/images/Email.png";
+import Charts from "@/assets/images/charts.png";
+import ArrowRight from "@/assets/images/ArrowRight.png";
+import ArrowLeft from "@/assets/images/ArrowLeft.png";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const Benefits = ({ setSelectedPage }: Props) => {
+const MainBody = ({ setSelectedPage }: Props) => {
   return (
     <main className="main-layout">
       {/* Left Sidebar */}
-      <aside className="sidebar left-sidebar font-color font-size-12">
+      <aside className="sidebar left-sidebar font-color font-size-12 flex">
         <div>
-          <p><span className="font-weight-700">Cover Image</span>: A stripy monarch caterpillar (Danaus plexippus) gorges on a butterfly milkweed. Photo by: Sarah Mac Farland</p>
-          <p><span className="font-weight-700">Photo by</span>: Sarah Mac Farland</p>
+          <p>
+            <span className="font-weight-700">Cover Image</span>: A stripy monarch
+            caterpillar (<em>Danaus plexippus</em>) gorges on a butterfly milkweed.
+            Photo by: Sarah Mac Farland
+          </p>
+          <p>
+            <span className="font-weight-700">Photo by</span>: Sarah Mac Farland
+          </p>
         </div>
-        <ul>
-          <li><a href="#">Popular Articles</a></li>
-          <li><a href="#">Trending Topics</a></li>
-          <li><a href="#">Health Tips</a></li>
-          <li><a href="#">Newsletter Signup</a></li>
-        </ul>
+        <div className="shares-section">
+          <p className="shares-count share-color">1k</p>
+          <p className="shares-count shares-style">SHARES</p>
+          <hr className="horizontal-line-social" />
+          <ul className="social-icons padding-top-10">
+            <li><a href="#"><img src={Twitter} alt="Twitter" /></a></li>
+            <li><a href="#"><img src={LinkedIn} alt="LinkedIn" /></a></li>
+            <li><a href="#"><img src={Facebook} alt="Facebook" /></a></li>
+            <li><a href="#"><img src={Reddit} alt="Reddit" /></a></li>
+            <li><a href="#"><img src={Email} alt="Email" /></a></li>
+          </ul>
+        </div>
+        <div className="vertical-line-left-sidebar"></div>
       </aside>
+
 
       {/* <!-- Main Content --> */}
       <section className="main-content font-color">
@@ -77,8 +66,55 @@ const Benefits = ({ setSelectedPage }: Props) => {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia Feugiat et Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia cursus morbi dui vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia cursus morbi dui vulputate. </p>
             <div id="body"></div>
             <img src={walk} alt="Atypon Logo" />
-            <p className="font-size-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia Feugiat et Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            <p className="font-size-12 walk-image-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia Feugiat et Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            <hr className="horizontal-line-pattern" />
+            <h3 className="font-size-32">Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia Feugiat et Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia cursus morbi dui vulputate. </p>
+            <p className="padding-top-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia Feugiat et Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia cursus morbi dui vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia cursus morbi dui vulputate. </p>
           </div>
+          <div className="flex padding-top-20">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque</p>
+            <img src={Charts} alt="Charts Logo" />
+          </div>
+          <div className="padding-top-20">
+            <h3 className="font-size-32">Conclusion</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia Feugiat et Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia cursus morbi dui vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius ultrices id diam elit amet. Lacinia cursus morbi dui vulputate. </p>
+          </div>
+          <div className="flex padding-top-20">
+            <div className="flex line-height-normal post">
+              <img className="author-info-image-size" src={ArrowLeft} alt="Author Image" />
+              <div className="post-desc">
+                <p className="font-size-12 padding-left-10"><span className="n-post">PREVIOUS POST</span></p>
+                <p className="font-size-12 padding-left-10">Beautiful and Creative Editing Photos by Egz...</p>
+              </div>
+            </div>
+            <div className="flex line-height-normal right-post">
+              <div className="post-desc">
+                <p className="font-size-12 padding-left-10"><span className="n-post">PREVIOUS POST</span></p>
+                <p className="font-size-12 padding-left-10">Beautiful and Creative Editing Photos by Egz...</p>
+              </div>
+              <img className="author-info-image-size" src={ArrowRight} alt="Author Image" />
+            </div>
+          </div>
+          <hr className="horizontal-line-pattern" />
+          <div className="main-author-info padding-top-20">
+            <div className="author-info">
+              <div className="text-align-left">
+                <p className="font-size-16">ABOUT THE AUTHOR</p>
+              </div>
+              <div className="flex padding-top-10">
+                <img src={farouq} alt="Author Image" />
+                <div className="author-details padding-left-20">
+                  <div className="flex">
+                    <h4 className="font-size-16 author-name text-align-left">Farouq Marei</h4>
+                  </div>
+                  <p className="font-size-12 author-title">Software Engineering Team Lead</p>
+                  <p className="font-size-12 author-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr className="horizontal-line-pattern" />
         </section>
       </section>
 
@@ -117,4 +153,4 @@ const Benefits = ({ setSelectedPage }: Props) => {
   );
 };
 
-export default Benefits;
+export default MainBody;
